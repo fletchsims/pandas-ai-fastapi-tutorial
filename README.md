@@ -1,6 +1,6 @@
 # pandas-ai-fastapi-tutorial
 
-Quick example of using Pandas AI and FastAPI to create a simple RESTAPI service.
+Quick example of using Pandas AI and FastAPI to create a simple REST API service.
 
 # How to get started
 - Install required dependencies: `pip isntall -r requirements.txt`
