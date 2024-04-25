@@ -8,6 +8,15 @@ __pycache__/
 
 # Data
 /data
+/cache
+/cache/*
+
+# DB
+*.db
+*.db.wal
+
+# .DS_Store
+.DS_Store
 
 # Distribution / packaging
 .Python
