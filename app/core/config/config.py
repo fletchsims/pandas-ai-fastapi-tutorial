@@ -14,7 +14,7 @@ def create_agent_instance() -> Agent:
         PandasConnectorConfig(original_df=data),
     )
     data_custom_head = data.head(25)
-    openai = MyOpenAI(api_token=get_env("OPENAI_API_KEY"))
+    openai = MyOpenAI(api_token=get_env("OPENAI_API"))
     return Agent(
         connector,
         config={

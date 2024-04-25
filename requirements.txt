@@ -2,3 +2,5 @@ fastapi
 pandasai
 pyyaml
 uvicorn
+fastparquet
+pyarrow
