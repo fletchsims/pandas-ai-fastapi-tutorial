@@ -4,12 +4,12 @@ from pandasai.llm import OpenAI
 from app.core.parser.response_parser import PandasDataFrame
 
 
-class OpenAI(OpenAI):
+class MyOpenAI(OpenAI):
 
     def __init__(
         self,
         api_token,
-        model: str = "gpt-4",
+        model: str = "gpt-3.5-turbo",
         name: str = None,
         description: str = None,
         config=None,
