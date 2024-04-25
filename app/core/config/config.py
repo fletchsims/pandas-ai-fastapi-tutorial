@@ -4,6 +4,7 @@ from pandasai.connectors.pandas import PandasConnectorConfig
 
 from app.core.llm.openai import MyOpenAI
 from app.core.parser.response_parser import PandasDataFrame
+from app.core.services.helpers import get_env
 from app.core.services.reader import read_data_with_dtype
 
 
