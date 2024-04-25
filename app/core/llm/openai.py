@@ -7,13 +7,13 @@ from app.core.parser.response_parser import PandasDataFrame
 class OpenAI(OpenAI):
 
     def __init__(
-            self,
-            api_token,
-            model: str = "gpt-4",
-            name: str = None,
-            description: str = None,
-            config=None,
-            **kwargs
+        self,
+        api_token,
+        model: str = "gpt-4",
+        name: str = None,
+        description: str = None,
+        config=None,
+        **kwargs
     ):
         super().__init__(api_token, **kwargs)
         self.llm = OpenAI(api_token=api_token, model=model)
@@ -25,15 +25,19 @@ class OpenAI(OpenAI):
             description = "Rows of data"
 
         if config is None:
-            config = {"enforce_privacy": False,
-                      "llm": self.llm, "verbose": True,
-                      "response_parser": PandasDataFrame
-                      }
-            
+            config = {
+                "enforce_privacy": False,
+                "llm": self.llm,
+                "verbose": True,
+                "response_parser": PandasDataFrame,
+            }
+
         self.name = name
         self.description = description
         self.config = config
 
     def chat(self, df, prompt, config):
-        df = SmartDataframe(df, name=self.name, description=self.description, config=config)
+        df = SmartDataframe(
+            df, name=self.name, description=self.description, config=config
+        )
         return df.chat(prompt)
