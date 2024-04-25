@@ -23,5 +23,10 @@ def read_data_with_dtype(path_to_data, dtype=None):
             return pd.read_parquet(path_to_data)
         else:
             return pd.read_parquet(path_to_data, dtype=dtype)
+    elif file_extension == "parquet":
+        if dtype is None:
+            return pd.read_parquet(path_to_data)
+        else:
+            return pd.read_parquet(path_to_data, dtype=dtype)
     else:
         raise ValueError("Unsupported file format")
